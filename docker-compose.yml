@@ -4,6 +4,9 @@ services:
     image: mysql/mysql-server:8.0.31
     ports:
       - '3306:3306'
+    volumes:
+      - ./data:/var/lib/mysql/mysql-server
+      - ./artifacts/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=scr_mysql
