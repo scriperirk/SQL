@@ -1,0 +1,1 @@
+Для перезапуска SUT запускаем /artifacts/app-deadline.bat
