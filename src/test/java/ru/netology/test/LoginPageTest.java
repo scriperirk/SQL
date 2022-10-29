@@ -1,5 +1,3 @@
-package test;
-
 package ru.netology.test;
 
 import org.junit.jupiter.api.Test;
@@ -11,7 +9,7 @@ import ru.netology.data.VerificationCodePage;
 import java.sql.SQLException;
 
 
-public class LoginPage {
+public class LoginPageTest {
 
     @Test
     void successEnterTest() throws SQLException {
