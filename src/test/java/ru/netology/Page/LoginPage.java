@@ -1,6 +1,8 @@
-package ru.netology.data;
+package ru.netology.Page;
 
 import com.codeborne.selenide.SelenideElement;
+import ru.netology.data.User;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
