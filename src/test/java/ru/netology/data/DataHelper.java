@@ -18,7 +18,7 @@ public class DataHelper {
 
     static {
         try {
-            connection = DriverManager.getConnection("jdbc:mysql/mysql-server://localhost:3306/scr_mysql", "scriper", "123");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/scr_mysql", "scriper", "123");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
