@@ -6,13 +6,10 @@ import ru.netology.data.User;
 import ru.netology.Page.LoginPage;
 import ru.netology.Page.VerificationCodePage;
 
-import java.sql.SQLException;
-
-
 public class LoginPageTest {
 
     @Test
-    void successEnterTest() throws SQLException {
+    void successEnterTest() {
         LoginPage login = new LoginPage();
         User user = DataHelper.getValidUserFirst();
         VerificationCodePage pageVerification = login.validLogin(user);
@@ -21,14 +18,14 @@ public class LoginPageTest {
     }
 
     @Test
-    void passwordErrorTest() throws SQLException {
+    void passwordErrorTest() {
         LoginPage login = new LoginPage();
         User wrongUser = DataHelper.getInvalidPasswordUser();
         login.invalidUser(wrongUser);
     }
 
     @Test
-    void invalidVerificationCodeTest() throws SQLException {
+    void invalidVerificationCodeTest() {
         LoginPage login = new LoginPage();
         User user = DataHelper.getValidUserFirst();
         VerificationCodePage pageVerification = login.validLogin(user);
@@ -36,7 +33,7 @@ public class LoginPageTest {
         pageVerification.invalidVerify(verificationCode);
     }
 
-    void doMaxEnter(User user) throws SQLException {
+    void doMaxEnter(User user) {
         LoginPage login;
         String verificationCode;
         VerificationCodePage pageVerification;
@@ -50,7 +47,7 @@ public class LoginPageTest {
     }
 
     @Test
-    void enterBlockTest() throws SQLException {
+    void enterBlockTest() {
         User user = DataHelper.getValidUserSecond();
         doMaxEnter(user);
 
