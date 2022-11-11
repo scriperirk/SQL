@@ -48,4 +48,14 @@ public class DataHelper {
         Faker faker = new Faker();
         return new AuthInfo("petya", faker.internet().password());
     }
+
+    @Value
+    public static class VerificationCodePage {
+        String code;
+    }
+
+    public static String getInvalidVerificationCode() {
+        Faker faker = new Faker();
+        return String.valueOf(faker.number());
+    }
 }
